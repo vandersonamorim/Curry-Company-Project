@@ -212,13 +212,13 @@ st.sidebar.markdown('### Selecione uma data limite')
 
 date_slider = st.sidebar.slider(
     'Até qual valor?',
-    value = datetime.strptime(pd.to_datetime('2022/3/5').strftime('%Y-%m-%d'), '%Y-%m-%d'),
-    #value = pd.to_datetime( "2022/3/5" ),
+    #value = datetime.strptime(pd.to_datetime('2022/3/5').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    value = pd.to_datetime( "2022-03-05" ),
     min_value = datetime.strptime(pd.to_datetime('2022/2/11').strftime('%Y-%m-%d'), '%Y-%m-%d'),
     #min_value = pd.to_datetime( "2022/2/11" ),
     max_value = datetime.strptime(pd.to_datetime('2022/4/6').strftime('%Y-%m-%d'), '%Y-%m-%d'),
     #max_value = pd.to_datetime( "2022/4/6" ),
-    format = 'DD-MM-YYYY'
+    format = 'YYYY-MM-DD'
 )
 
 st.sidebar.markdown('---')
