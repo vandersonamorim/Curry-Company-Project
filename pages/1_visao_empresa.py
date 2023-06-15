@@ -229,7 +229,7 @@ def country_maps(df1):
 
 
 # Importando dataset
-df = pd.read_csv('../datasets/train.csv')
+df = pd.read_csv('./datasets/train.csv')
 
 # Limpando o dataframe
 df1 = clean_code(df)
