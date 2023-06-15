@@ -10,6 +10,7 @@ import streamlit as st
 import folium
 from streamlit_folium import folium_static
 from PIL import Image
+from datetime import datetime
 
 st.set_page_config(page_title = 'Visão Entregadores', page_icon = '🛵', layout = 'wide')
 
@@ -109,7 +110,7 @@ def rating_avg_std(df1, col):
 # ===================================
 
 # Importando dataset
-df = pd.read_csv('./datasets/train.csv')
+df = pd.read_csv('../datasets/train.csv')
 
 # Limpando o dataframe
 df1 = clean_code(df)
@@ -133,9 +134,12 @@ st.sidebar.markdown('### Selecione uma data limite')
 
 date_slider = st.sidebar.slider(
     'Até qual valor?',
-    value = pd.datetime( 2022, 3, 5 ),
-    min_value = pd.datetime( 2022, 2, 11 ),
-    max_value = pd.datetime( 2022, 4, 6 ),
+    # value = pd.datetime( 2022, 3, 5 ),
+    # min_value = pd.datetime( 2022, 2, 11 ),
+    # max_value = pd.datetime( 2022, 4, 6 ),
+    value = datetime.strptime(pd.to_datetime('2022-03-05').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    min_value = datetime.strptime(pd.to_datetime('2022-02-11').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    max_value = datetime.strptime(pd.to_datetime('2022-04-06').strftime('%Y-%m-%d'), '%Y-%m-%d'),
     format = 'DD-MM-YYYY'
 )
 

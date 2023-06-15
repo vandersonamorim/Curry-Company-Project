@@ -188,7 +188,7 @@ def std_distribution_chart(df1):
 # ===================================
 
 # Importando dataset
-df = pd.read_csv('./datasets/train.csv')
+df = pd.read_csv('../datasets/train.csv')
 
 # Limpando o dataframe
 df1 = clean_code(df)
@@ -212,13 +212,13 @@ st.sidebar.markdown('### Selecione uma data limite')
 
 date_slider = st.sidebar.slider(
     'Até qual valor?',
-    #value = datetime.strptime(pd.to_datetime('2022/3/5').strftime('%Y-%m-%d'), '%Y-%m-%d'),
-    value = pd.to_datetime( "2022-03-05" ),
-    min_value = datetime.strptime(pd.to_datetime('2022/2/11').strftime('%Y-%m-%d'), '%Y-%m-%d'),
-    #min_value = pd.to_datetime( "2022/2/11" ),
-    max_value = datetime.strptime(pd.to_datetime('2022/4/6').strftime('%Y-%m-%d'), '%Y-%m-%d'),
-    #max_value = pd.to_datetime( "2022/4/6" ),
-    format = 'YYYY-MM-DD'
+    # value = pd.datetime( 2022, 3, 5 ),
+    # min_value = pd.datetime( 2022, 2, 11 ),
+    # max_value = pd.datetime( 2022, 4, 6 ),
+    value = datetime.strptime(pd.to_datetime('2022-03-05').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    min_value = datetime.strptime(pd.to_datetime('2022-02-11').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    max_value = datetime.strptime(pd.to_datetime('2022-04-06').strftime('%Y-%m-%d'), '%Y-%m-%d'),
+    format = 'DD-MM-YYYY'
 )
 
 st.sidebar.markdown('---')
@@ -236,8 +236,6 @@ st.sidebar.caption('Desenvolvido por Vanderson P. Amorim')
 # Utilizando o filtro no Dataset
 
 # Filtro data
-date_format = "%Y/%m/%d"
-date_slider_str = date_slider.strftime(date_format)
 linhas_selecionadas = df1['Order_Date'] < date_slider
 df1 = df1.loc[linhas_selecionadas, :]
 
