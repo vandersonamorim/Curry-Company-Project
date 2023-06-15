@@ -187,7 +187,7 @@ def std_distribution_chart(df1):
 # ===================================
 
 # Importando dataset
-df = pd.read_csv('../train.csv')
+df = pd.read_csv('./datasets/train.csv')
 
 # Limpando o dataframe
 df1 = clean_code(df)
