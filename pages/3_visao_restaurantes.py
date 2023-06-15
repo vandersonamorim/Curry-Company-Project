@@ -233,6 +233,8 @@ st.sidebar.caption('Desenvolvido por Vanderson P. Amorim')
 # Utilizando o filtro no Dataset
 
 # Filtro data
+date_format = "%Y/%m/%d"
+date_slider_str = date_slider.strftime(date_format)
 linhas_selecionadas = df1['Order_Date'] < date_slider
 df1 = df1.loc[linhas_selecionadas, :]
 
