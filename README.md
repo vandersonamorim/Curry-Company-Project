@@ -73,4 +73,4 @@ Da visão da Empresa, podemos concluir que o número de pedidos cresceu entre a 
 
 ---
 
-Link dos dados: [Clique aqui]([https://vanderson-curry-company.streamlit.app/](https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset)https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset)
+Link dos dados: [Clique]([https://vanderson-curry-company.streamlit.app/](https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset)https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset)
