@@ -59,6 +59,8 @@ O painel foi desenvolvido utilizando as métricas que refletem as visões do mod
 Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.
 O painel pode ser acessado através desse link: [Dashboard Online](https://vanderson-curry-company.streamlit.app/)
 
+![Painel gerencial](painel.gif)
+
 # Conclusão
 
 Com a conclusão do projeto foi possível obter um painel online para visualizar as métrica.
